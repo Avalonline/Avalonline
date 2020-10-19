@@ -8,6 +8,7 @@ import "bootstrap-vue/dist/bootstrap-vue.css";
 import BootstrapVue from "bootstrap-vue";
 import VueSocketIO from "vue-socket.io";
 import VueChatScroll from "vue-chat-scroll";
+import VueGtag from "vue-gtag";
 
 Vue.use(BootstrapVue);
 Vue.use(VueChatScroll);
@@ -22,6 +23,9 @@ Vue.use(
     }
   })
 );
+Vue.use(VueGtag, {
+  config: { id: "UA-167531826-1" }
+}, router);
 
 Vue.config.productionTip = false;
 
